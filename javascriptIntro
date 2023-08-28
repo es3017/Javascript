@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Web Page</title>
+</head>
+<body>
+    <label for="languageInput">What language was created to add interactivity to the Web?</label>
+    <input type="text" id="languageInput">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const inputElement = document.getElementById("languageInput");
+
+    inputElement.addEventListener("blur", function () {
+        const userInput = inputElement.value;
+        alert("You typed: " + userInput);
+    });
+
+    const libraryChoice = prompt("Which code library would you prefer? (Vue, React, jQuery)");
+
+    alert("Your choice: " + libraryChoice);
+});
+    </script>
+</body>
+</html>
